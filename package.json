@@ -2,7 +2,9 @@
   "name": "@nx-ts-lib-typedoc-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "typedoc": "typedoc"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
@@ -25,6 +27,7 @@
     "nx": "20.8.1",
     "prettier": "^2.6.2",
     "tslib": "^2.3.0",
+    "typedoc": "^0.28.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.19.0",
     "verdaccio": "^6.0.5",
