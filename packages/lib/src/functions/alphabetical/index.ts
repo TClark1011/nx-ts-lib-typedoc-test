@@ -8,6 +8,9 @@ export function alphabetical<T>(
 	arr: readonly T[],
 	getKey: (item: T) => string,
 ): readonly T[];
+/**
+ * @document README.md
+ */
 export function alphabetical<T>(
 	arr: T[] | readonly T[],
 	getKey: (item: T) => string,
