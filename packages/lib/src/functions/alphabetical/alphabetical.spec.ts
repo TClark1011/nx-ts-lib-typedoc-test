@@ -21,3 +21,91 @@ it("preserves a sorted string array", () => {
 
 	expect(sorted).toEqual(["apple", "banana", "cherry"]);
 });
+
+it("sorts an object array by a string property", () => {
+	const gods = [
+		{
+			name: 'Ra',
+			power: 100
+		},
+		{
+			name: 'Zeus',
+			power: 98
+		},
+		{
+			name: 'Loki',
+			power: 72
+		},
+		{
+			name: 'Vishnu',
+			power: 100
+		}
+	];
+
+	const sorted = alphabetical(gods, (g) => g.name);
+	expect(sorted).toEqual([
+		{ name: 'Loki', power: 72 },
+		{ name: 'Ra', power: 100 },
+		{ name: 'Vishnu', power: 100 },
+		{ name: 'Zeus', power: 98 }
+	]);
+})
+
+it("does not mutate an object array", () => {
+	const gods = [
+		{
+			name: 'Ra',
+			power: 100
+		},
+		{
+			name: 'Zeus',
+			power: 98
+		},
+		{
+			name: 'Loki',
+			power: 72
+		},
+		{
+			name: 'Vishnu',
+			power: 100
+		}
+	];
+
+	alphabetical(gods, (g) => g.name);
+
+	expect(gods).toEqual([
+		{ name: 'Ra', power: 100 },
+		{ name: 'Zeus', power: 98 },
+		{ name: 'Loki', power: 72 },
+		{ name: 'Vishnu', power: 100 }
+	]);
+})
+
+it("preserves a sorted object array", () => {
+	const gods = [
+		{
+			name: 'Loki',
+			power: 72
+		},
+		{
+			name: 'Ra',
+			power: 100
+		},
+		{
+			name: 'Vishnu',
+			power: 100
+		},
+		{
+			name: 'Zeus',
+			power: 98
+		}
+	];
+
+	const sorted = alphabetical(gods, (g) => g.name);
+	expect(sorted).toEqual([
+		{ name: 'Loki', power: 72 },
+		{ name: 'Ra', power: 100 },
+		{ name: 'Vishnu', power: 100 },
+		{ name: 'Zeus', power: 98 }
+	]);
+})

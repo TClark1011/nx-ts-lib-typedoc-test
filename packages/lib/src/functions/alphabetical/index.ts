@@ -9,7 +9,8 @@ export function alphabetical<T>(
 	getKey: (item: T) => string,
 ): readonly T[];
 /**
- * @document README.md
+ * {@include README.md} 
+ * {@includeCode example.ts}
  */
 export function alphabetical<T>(
 	arr: T[] | readonly T[],
