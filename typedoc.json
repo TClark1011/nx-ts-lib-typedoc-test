@@ -1,13 +1,9 @@
 {
   "entryPoints": ["./packages/lib/src/functions/*/index.ts"],
   "tsconfig": "./packages/lib/tsconfig.json",
-  "outputs": [
-    {
-      "name": "html",
-      "path": "./docs_html"
-    }
-  ],
   "validation": {
     "notDocumented": true
-  }
+  },
+  "plugin": ["typedoc-plugin-markdown"],
+  "out": "./docs_gen"
 }
