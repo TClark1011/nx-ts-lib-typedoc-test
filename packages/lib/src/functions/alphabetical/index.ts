@@ -10,7 +10,7 @@ export function alphabetical<T>(
 ): readonly T[];
 /**
  * {@include README.md} 
- * {@includeCode example.ts}
+ * {@includeCode example.ts#example}
  */
 export function alphabetical<T>(
 	arr: T[] | readonly T[],
