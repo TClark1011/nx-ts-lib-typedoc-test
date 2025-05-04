@@ -27,7 +27,10 @@ export default [
     plugins: {
       jsdoc,
     },
-    rules: jsdoc.configs['flat/recommended-typescript-error'].rules,
+    rules: {
+      ...jsdoc.configs['flat/recommended-error'].rules,
+      'jsdoc/require-template': 'error',
+    },
     // rules: {
     //   // no console log
     //   'no-console': 'error',

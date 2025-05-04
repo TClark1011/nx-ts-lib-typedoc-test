@@ -8,14 +8,25 @@ export function alphabetical<T>(
 	arr: readonly T[],
 	getKey: (item: T) => string,
 ): readonly T[];
+
+
+/**
+ * Fetches a string key from an array item
+ * @callback getKeyCallback
+ * @template T the type of the items in the array
+ * @param {T} item - The item to extract the key from
+ * @returns {string} The key to use for sorting
+ */
+
 /**
  * Sorts an array of items alphabetically with string keys extracted
  * from each item by a callback function.
- * {@includeCode example.ts#example}
- * @param arr - The array to sort
- * @param getKey - A function that extracts a string from each item
+ * @template T the type of the items in the array
+ * @param {T[]} arr - The array to sort
+ * @param {getKeyCallback} getKey - A function that extracts a string from each item
  * that is used for sorting
- * @returns A new array sorted alphabetically by the keys
+ * @returns {T[]} A new array sorted alphabetically by the keys
+ * {@includeCode example.ts#example}
  */
 export function alphabetical<T>(
 	arr: T[] | readonly T[],
