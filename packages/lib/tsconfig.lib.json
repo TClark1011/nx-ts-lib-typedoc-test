@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "./eslint.config.mjs"],
   "references": [],
   "exclude": [
     "vite.config.ts",

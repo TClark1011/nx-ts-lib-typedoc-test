@@ -9,8 +9,13 @@ export function alphabetical<T>(
 	getKey: (item: T) => string,
 ): readonly T[];
 /**
- * {@include README.md} 
+ * Sorts an array of items alphabetically with string keys extracted
+ * from each item by a callback function.
  * {@includeCode example.ts#example}
+ * @param arr - The array to sort
+ * @param getKey - A function that extracts a string from each item
+ * that is used for sorting
+ * @returns A new array sorted alphabetically by the keys
  */
 export function alphabetical<T>(
 	arr: T[] | readonly T[],

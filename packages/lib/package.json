@@ -20,5 +20,8 @@
   ],
   "nx": {
     "name": "lib"
+  },
+  "devDependencies": {
+    "eslint-plugin-jsdoc": "^50.6.11"
   }
 }

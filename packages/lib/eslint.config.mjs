@@ -1,5 +1,7 @@
 import baseConfig from '../../eslint.config.mjs';
+import jsdoc from 'eslint-plugin-jsdoc';
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   ...baseConfig,
   {
@@ -18,5 +20,17 @@ export default [
     languageOptions: {
       parser: await import('jsonc-eslint-parser'),
     },
+  },
+  // JSDoc Enforcement
+  {
+    files: ['./src/functions/*/index.ts'],
+    plugins: {
+      jsdoc,
+    },
+    rules: jsdoc.configs['flat/recommended-typescript-error'].rules,
+    // rules: {
+    //   // no console log
+    //   'no-console': 'error',
+    // },
   },
 ];
