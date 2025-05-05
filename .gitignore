@@ -46,3 +46,7 @@ vitest.config.*.timestamp*
 
 # generated documentation
 docs_gen
+
+# tsc build info
+**/tsconfig.tsbuildinfo 
+**/tsconfig.*.tsbuildinfo

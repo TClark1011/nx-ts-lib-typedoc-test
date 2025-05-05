@@ -28,7 +28,7 @@ export default [
       jsdoc,
     },
     rules: {
-      ...jsdoc.configs['flat/recommended-error'].rules,
+      ...jsdoc.configs['flat/recommended-typescript-error'].rules,
       'jsdoc/require-template': 'error',
     },
     // rules: {
