@@ -6,9 +6,12 @@
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "declarationMap": false,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "$utils$": ["./src/utils.js"]
+    }
   },
-  "include": ["src/functions/*/index.ts", "./eslint.config.mjs"],
+  "include": ["src/**/*.ts", "./eslint.config.mjs"],
   "references": [],
   "exclude": [
     "vite.config.ts",

@@ -1,5 +1,3 @@
-
-
 export function alphabetical<T>(
 	arr: T[],
 	getKey: (item: T) => string,
@@ -36,4 +34,3 @@ export function alphabetical<T>(
 		return 0
 	})
 }
-
